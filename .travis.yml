@@ -7,3 +7,13 @@ install:
   - yarn install
 script:
   - npm run build
+deploy:
+  provider: pages
+  local_dir: dist/
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN
+  keep_history: true
+  name: wuzhe
+  email: wuzhe_@aliyun.com
+  on:
+    branch: master
